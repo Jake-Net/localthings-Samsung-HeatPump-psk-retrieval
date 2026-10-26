@@ -64,7 +64,7 @@ After this, a store appears:
 /data/user/0/com.samsung.android.oneconnect/files/<STORE_UUID>.db
 ```
 
-Observed: `af4e1631-66ed-3726-ad65-beca22f02776`.
+Observed: `af4e1631-66ed-3726-ad65-xxxxxxxxxxxx`.
 
 ## 5. Do not rely on Frida's Java bridge
 
@@ -125,8 +125,8 @@ The script verifies the MAC, decodes the CBOR, and picks the single
 Observed result:
 
 ```text
-subject (device)  fd41c401-3203-099c-d27c-5f73bd2e8cd8   (Wi-Fi Kit)
-owner  (identity) debaee55-70a7-8239-be5a-54e6e48f1058
+subject (device)  fd41c401-3203-099c-d27c-xxxxxxxxxxxx   (Wi-Fi Kit)
+owner  (identity) debaee55-70a7-8239-be5a-xxxxxxxxxxxx
 key length        16 bytes
 identity NUL?     no
 ```
@@ -145,7 +145,7 @@ LocalThings**.
 | Credential type | Owner PSK |
 | Identity | `private/heatpump-owner-psk.json` → `psk_identity` |
 | PSK | `private/heatpump-owner-psk.json` → `psk_hex` |
-| OCF device ID (if asked) | `fd41c401-3203-099c-d27c-5f73bd2e8cd8` |
+| OCF device ID (if asked) | `fd41c401-3203-099c-d27c-xxxxxxxxxxxx` |
 
 Do not paste the storage key or the store UUID into the identity field.
 
