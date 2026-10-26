@@ -1,0 +1,6 @@
+# Host-side environment for the x86_64 emulator route.
+# frida must match the Android server you push (frida-server-17.24.2-android-x86_64).
+frida==17.24.2
+frida-tools>=14.11
+cbor2>=6.1.5
+cryptography>=50.0.2
