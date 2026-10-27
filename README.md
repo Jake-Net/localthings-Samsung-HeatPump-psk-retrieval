@@ -1,7 +1,7 @@
 # Final runbook — Samsung heat-pump OwnerPSK (SM-A217F, Android 12)
 
 Last verified: 2026-10-26
-Device: Galaxy A21s `SM-A217F`, serial `R58NA2KW1TR`, Android 12 (SDK 31)
+Device: Galaxy A21s `SM-A217F`, Android 12 (SDK 31)
 App: SmartThings `1.8.52.23` (`versionCode=185223020`), Galaxy Store
 Appliance: Samsung EHS heat pump + Wi-Fi Kit `MIM-H04EN`, `192.168.6.243`
 
@@ -53,7 +53,7 @@ This is what writes the account store.
 2. On the Wi-Fi Kit, hold the **AP button ~5 s** until the Wi-Fi setup LED
    turns on.
 3. SmartThings → **+** → **Add device** → **Scan nearby**.
-4. Connect to the kit's AP, choose **UIOT**, enter the Wi-Fi password.
+4. Connect to the kit's AP, enter the local Wi-Fi password.
 5. Finish onboarding until the heat pump is online.
 
 After this, a store appears:
@@ -131,8 +131,7 @@ key length        16 bytes
 identity NUL?     no
 ```
 
-The subject is the **Wi-Fi Kit**, because that is the DTLS endpoint at
-`192.168.6.243`; the heat-pump child device sits behind it.
+The subject is the **Wi-Fi Kit**, because that is the DTLS endpoint; the heat-pump child device sits behind it.
 
 ## 8. Configure LocalThings
 
@@ -141,7 +140,7 @@ LocalThings**.
 
 | Field | Value |
 |---|---|
-| IP | `192.168.6.243` |
+| IP | `x.x.x` |
 | Credential type | Owner PSK |
 | Identity | `private/heatpump-owner-psk.json` → `psk_identity` |
 | PSK | `private/heatpump-owner-psk.json` → `psk_hex` |
